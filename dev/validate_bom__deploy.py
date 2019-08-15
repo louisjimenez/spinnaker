@@ -1428,6 +1428,7 @@ class GoogleValidateBomDeployer(GenericVmValidateBomDeployer):
         ' --network {network}'
         ' --tags {network_tags}'
         ' --scopes {scopes}'
+        ' --service-account {gcloud_account}'
         ' {instance}'
         .format(gcloud_account=options.deploy_hal_google_service_account,
                 machine_type=options.deploy_google_machine_type,
