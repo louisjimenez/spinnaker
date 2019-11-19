@@ -129,7 +129,7 @@ class BuildSpinCommand(RepositoryCommandProcessor):
       labels = {'repository': repository.name,
                 'dist': dist_arch.dist,
                 'arch': dist_arch.arch}
-      cmd = 'go get -v -u {}'.format(spin_package_path)
+      cmd = 'GO111MODULE=on go get -v -u {}'.format(spin_package_path)
       self.metrics.time_call(
           'GoGet', labels, self.metrics.default_determine_outcome_labels,
           check_subprocesses_to_logfile, 'Fetching Go packages ' + context,
